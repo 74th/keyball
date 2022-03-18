@@ -38,10 +38,10 @@ enum custom_keycodes
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE_MAC] = LAYOUT_universal(
  LALT_T(KC_GRV),KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                                     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       KC_MINS,
-    KC_GRV,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                                     KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_EQL,
+ LT(_RAISE,KC_GRV),KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                                     KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_EQL,
   CTL_T(KC_TAB),KC_A,       KC_S,       KC_D,       KC_F,       KC_G,                                     KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
     KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,       KC_LBRC,        KC_RBRC,      KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,SFT_T(KC_BSLS),
-  MAC_ESC_EISU,CTL_T(KC_TAB),GUI_T(KC_LANG2),KC_SPC,SCRL_MO,  KC_MS_BTN1,  KC_MS_BTN2,LT(_RAISE, KC_ENT), ALT_T(KC_LANG1),KC_BSPC,KC_A,       KC_B,       KC_BSPC,    MO(_DOUBLE)
+  SCRL_MO,  KC_MS_BTN1, KC_MS_BTN2,  MAC_ESC_EISU,CTL_T(KC_TAB),GUI_T(KC_LANG2),KC_SPC,LT(_RAISE, KC_ENT), ALT_T(KC_LANG1),KC_BSPC,KC_A,       KC_B,       KC_BSPC,    MO(_DOUBLE)
   ),
 
   [_LINUX] = LAYOUT_universal(
@@ -49,15 +49,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,    _______,    _______,    _______,    _______,    _______,                                  _______,    _______,    _______,    _______,    _______,    _______,
     _______,    _______,    _______,    _______,    _______,    _______,                                  _______,    _______,    _______,    _______,    _______,    _______,
     _______,    _______,    _______,    _______,    _______,    _______,      _______,        _______,    _______,    _______,    _______,    _______,    _______,    _______,
-  LINUX_ESC_EISU,ALT_T(KC_TAB),CTL_T(KC_MHEN),_______, _______, _______,      _______,        _______,   GUI_T(KC_HENK),_______,  _______,    _______,    _______,    _______
+    _______,    _______,  _______,LINUX_ESC_EISU,ALT_T(KC_TAB),CTL_T(KC_MHEN),_______,        _______,   GUI_T(KC_HENK),_______,  _______,    _______,    _______,    _______
   ),
 
   [_RAISE] = LAYOUT_universal(
     C(A(KC_Q)), G(KC_F1), S(G(KC_F2)),  G(KC_F3),   G(KC_F4),   G(KC_F5),                                 G(KC_F6),   G(KC_F7),   G(KC_F8),   G(KC_F9),   _______,    MO(_DOUBLE),
     KC_ESC,     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,                                    KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,
     KC_GRV,     S(KC_1),  S(KC_2),      S(KC_3),    S(KC_4),    S(KC_5),                                  S(KC_6),    S(KC_7),    S(KC_8),    S(KC_9),    S(KC_0),    S(KC_MINS),
-    _______,    _______,    _______,    S(G(KC_3)), S(G(KC_4)), KC_F12,       _______,        _______,    KC_LEFT,  KC_DOWN,      KC_UP,      KC_RIGHT,   KC_HOME,    KC_END,
-    _______,    _______,    _______,    _______,    _______,    _______,      _______,        _______,    _______,  KC_DEL,       _______,    _______,    _______,    _______
+    _______,    _______,    _______,    S(G(KC_3)), S(G(KC_4)), KC_F12,       KC_MS_BTN3,     _______,    KC_LEFT,  KC_DOWN,      KC_UP,      KC_RIGHT,   KC_HOME,    KC_END,
+    _______,    _______,    _______,    _______,    SCRL_MO,    KC_MS_BTN1,   KC_MS_BTN2,     _______,    KC_BSPC,  KC_DEL,       _______,    _______,    _______,    _______
   ),
 
   [_LINUX_RAISE] = LAYOUT_universal(
